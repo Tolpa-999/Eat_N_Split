@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    max-height: 100vh ;
+}
+body {
+    background-color: #eee;
+    font-family: sans-serif;
+    max-width: 200vw;
+    display: grid;
+    justify-content: center;
+}
+.main-div {
+    padding: 20px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    /* grid-template-columns: repeat(auto-fit, min-max(255px, 1fr)); */
+    /* grid-template-columns: repeat(2, min-max(1000px, 1fr)); */
+    /* background-color: #eee; */
+    gap: 20px;
+    max-width: 1000px;    
+}
+@media only screen and (min-width: 600px) {
+    .main-div  {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+.main-div .sidebar {
+    padding: 10px;
+
+}
+.main-div .sidebar ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    padding: 5px;
+    transition-duration: .2s;
+}
+.main-div ul li {
+    padding: 10px;
+    display: flex;
+    border-radius: 10px;
+    justify-content: space-between;
+}
+.main-div ul li:hover {
+    background-color: wheat;
+}
+.main-div li img {
+    border-radius: 50%;
+    height: 48px;
+    width: 48px;
+}
+.main-div .name {
+    margin: 0px 10px;
+}
+.main-div .name p {
+    font-size: 13px;
+    font-weight: bold;
+    
+}
+.green {
+    color: green;
+}
+.red {
+    color: red;
+}
+.main-div .button {
+    background-color: orange;
+    color: black;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    height: 30px;
+    padding: 0px 20px;
+    cursor: pointer;
+    align-self: center;
+}
+.main-div button:active {
+    transform: scale(.96);
+}
+.main-div ul .btn-friend {
+    align-self: end;
+    margin-right: 10px;
+}
+/* form for add friend */
+.main-form {
+    display: flex;
+    margin-top: 15px;
+    flex-direction: column;
+}
+form {
+    background-color: wheat;
+    padding: 15px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 8px;
+    margin-bottom: 20px;
+    height: fit-content;
+    width: fit-content;
+}
+form div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+form label {
+    padding-right: 5px;
+}
+form input,
+form select {
+    outline: none;
+    border: 1px solid rgb(224, 224, 224);
+    padding: 7px 6px;
+    border-radius: 6px;
+    color: rgb(33, 33, 33);
+}
+form .button {
+    width: 41%;
+    justify-self: flex-end;
+}
+
+.split {
+    padding-right: 20px;
+}
+.split  {
+    margin-top: 25px;
+}
+.split form input,
+form select {
+    width: 100px;
+    height: min-content;
+}
+form select option {
+    background-color: rgb(38, 38, 50);
+    color: white;
+}
+.main-form {
+}
+.only {
+    background-color: #eee;
+}
+.active {
+    background-color: wheat;
+}
